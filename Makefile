@@ -1,12 +1,16 @@
 .PHONY: install check fix build
 
-install: node_modules bun.lock
+install: node_modules bun.lock deno.lock
 
 node_modules: package.json
-	bun install
+	bun i --frozen-lockfile
+	deno install --allow-scripts
 
-bun.lockb: package.json
+bun.lock: package.json
 	bun update
+
+deno.lock: package.json deno.json
+	deno install --allow-scripts
 
 check: install
 	bun check
