@@ -32,8 +32,11 @@ dist: jsr npm
 	deno task fix
 	deno task check
 
-publish: dist
+test: dist
+	bun run test
+
+publish: test
 	bunx pkg-pr-new publish
 
-release: dist
+release: test
 	bun release

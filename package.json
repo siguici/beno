@@ -337,11 +337,14 @@
     "lint": "biome check --write .",
     "release": "changeset publish",
     "prepare": "husky && gitmoji -i",
+    "test": "node --loader tsm --enable-source-maps bin/test.ts",
     "unsed": "knip --fix"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@changesets/cli": "^2.28.1",
+    "@japa/assert": "^4.0.1",
+    "@japa/runner": "^4.2.0",
     "@types/bun": "^1.2.5",
     "@types/cross-spawn": "^6.0.6",
     "@types/deno": "^2.2.0",
@@ -356,6 +359,7 @@
     "pkg-pr-new": "^0.0.41",
     "rimraf": "^6.0.1",
     "tslib": "^2.8.1",
+    "tsm": "^2.3.0",
     "typescript": "^5.8.2"
   },
   "dependencies": {

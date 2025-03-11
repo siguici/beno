@@ -32,8 +32,8 @@ jobs:
         run: |
           bun install
 
-      - name: ✅ Check code and build for production
-        run: make build
+      - name: ✅ Check code, build for production and run tests
+        run: make test
 
       - name: 📦️ Upload Deno distribution files
         uses: actions/upload-artifact@v4

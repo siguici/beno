@@ -1,7 +1,13 @@
 {
   "$schema": "./node_modules/knip/schema.json",
-  "entry": ["src/index.ts", "scripts/build.ts", "src/fetch.node.cts"],
+  "entry": [
+    "bin/test.ts",
+    "src/index.ts",
+    "scripts/build.ts",
+    "src/fetch.node.cts"
+  ],
   "project": [
+    "bin/**/*.ts",
     "src/**/*.ts",
     "scripts/*.ts",
     "!src/**/*.{deno.ts,bun.ts,node.cts,node.ts}"
