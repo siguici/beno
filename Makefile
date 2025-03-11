@@ -32,8 +32,27 @@ dist: jsr npm
 	deno task fix
 	deno task check
 
+.PHONY: test
+
+IS_CI ?= $(CI)
+
+TEST_CMD = test
+
+PACKAGE_MANAGERS = npm bun deno
+FOUND_PM = $(shell which $(firstword $(filter-out $(wildcard /usr/bin/false),$(foreach pm,$(PACKAGE_MANAGERS),$(shell which $(pm) || echo false)))) 2>/dev/null)
+
 test: dist
-	bun run test
+ifeq ($(IS_CI),true)
+	bun run $(TEST_CMD)
+else
+	@for pm in $(PACKAGE_MANAGERS); do \
+		if command -v $$pm >/dev/null 2>&1; then \
+			echo "Running tests with $$pm..."; \
+			$$pm run $(TEST_CMD); \
+		fi; \
+	done; \
+	echo "No package manager found!" && exit 1
+endif
 
 publish: test
 	bunx pkg-pr-new publish
