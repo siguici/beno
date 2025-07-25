@@ -1,7 +1,7 @@
 import {
+  createServer,
   type IncomingMessage,
   type ServerResponse,
-  createServer,
 } from 'node:http';
 import { toServeOptions } from './helpers';
 import type {

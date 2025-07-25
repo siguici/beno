@@ -1,7 +1,7 @@
 import esbuild, { type BuildOptions, type BuildResult } from 'esbuild';
 import { globbySync } from 'globby';
 import pkg from '../package.json';
-import { fs, path, zlib, process } from '../src/';
+import { fs, path, process, zlib } from '../src/';
 import tsconfig from '../tsconfig.json';
 
 type Target = BuildOptions['target'] | 'default';

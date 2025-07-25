@@ -1,12 +1,12 @@
 import { fileURLToPath } from 'node:url';
 import { defaultHost, defaultPort } from './defaults';
-import type { SpawnOptions } from './types';
 import type {
   Address,
   Hostname,
   Port,
   ServeHandler,
   ServeOptions,
+  SpawnOptions,
 } from './types';
 
 export function isSpawnOptions(opts: unknown): opts is SpawnOptions {

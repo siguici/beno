@@ -355,30 +355,30 @@
     "unsed": "knip --fix"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@changesets/cli": "^2.28.1",
-    "@japa/assert": "^4.0.1",
-    "@japa/runner": "^4.2.0",
-    "@types/bun": "^1.2.5",
+    "@biomejs/biome": "^2.1.2",
+    "@changesets/cli": "^2.29.5",
+    "@japa/assert": "^4.1.1",
+    "@japa/runner": "^4.3.0",
+    "@types/bun": "^1.2.19",
     "@types/cross-spawn": "^6.0.6",
-    "@types/deno": "^2.2.0",
-    "@types/node": "^22.13.10",
+    "@types/deno": "^2.3.0",
+    "@types/node": "^24.1.0",
     "@types/which": "^3.0.4",
     "denoify": "^1.6.17",
-    "esbuild": "^0.25.1",
-    "gitmoji-cli": "^9.5.0",
+    "esbuild": "^0.25.8",
+    "gitmoji-cli": "^9.7.0",
     "globby": "^14.1.0",
     "husky": "^9.1.7",
-    "knip": "^5.45.0",
-    "pkg-pr-new": "^0.0.41",
+    "knip": "^5.62.0",
+    "pkg-pr-new": "^0.0.54",
     "rimraf": "^6.0.1",
     "tslib": "^2.8.1",
     "tsm": "^2.3.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "cross-spawn": "^7.0.6",
-    "urlpattern-polyfill": "^10.0.0",
+    "urlpattern-polyfill": "^10.1.0",
     "which": "^5.0.0"
   }
 }

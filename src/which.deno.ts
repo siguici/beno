@@ -26,7 +26,7 @@ const getPathInfo = ({
 };
 
 function normalizePath(path: string) {
-  path = path.replace(/[\\\/]/g, dirDelimiter);
+  path = path.replace(/[\\/]/g, dirDelimiter);
   if (!path.endsWith(dirDelimiter)) {
     path += dirDelimiter;
   }
