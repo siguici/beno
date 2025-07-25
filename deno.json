@@ -9,6 +9,7 @@
     "./child_process": "./deno/child_process.ts",
     "./console": "./deno/console.ts",
     "./crypto": "./deno/crypto.ts",
+    "./defaults": "./deno/defaults.ts",
     "./dgram": "./deno/dgram.ts",
     "./diagnostics_channel": "./deno/diagnostics_channel.ts",
     "./dns": "./deno/dns.ts",

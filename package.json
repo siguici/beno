@@ -85,6 +85,13 @@
       "import": "./node/crypto.mjs",
       "require": "./node/crypto.cjs"
     },
+    "./defaults": {
+      "bun": "./node/defaults.ts",
+      "deno": "./deno/defaults.js",
+      "types": "./node/defaults.d.ts",
+      "import": "./node/defaults.mjs",
+      "require": "./node/defaults.cjs"
+    },
     "./dgram": {
       "bun": "./node/dgram.ts",
       "deno": "./deno/dgram.js",
@@ -224,6 +231,13 @@
       "types": "./node/readline.d.ts",
       "import": "./node/readline.mjs",
       "require": "./node/readline.cjs"
+    },
+    "./serve": {
+      "bun": "./node/serve.ts",
+      "deno": "./deno/serve.js",
+      "types": "./node/serve.d.ts",
+      "import": "./node/serve.mjs",
+      "require": "./node/serve.cjs"
     },
     "./stream": {
       "bun": "./node/stream.ts",
