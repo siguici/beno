@@ -1,4 +1,6 @@
 import { description, license, name, version } from '../package.json';
+import { whichPackageManager } from './pm';
+import { whichRuntime } from './runtime';
 import serve from './serve';
 import { exec, execSync, spawn, spawnSync } from './subprocess';
 
@@ -51,6 +53,8 @@ const _beno = {
   version,
   license,
   description,
+  runtime: whichRuntime(),
+  packageManager: whichPackageManager(),
   serve,
   exec,
   execSync,
