@@ -1,7 +1,14 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "includes": ["**", "!**/tests/fixtures"]
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/tests/fixtures",
+      "!**/jsr",
+      "!**/deno",
+      "!**/node"
+    ]
   },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
@@ -22,15 +29,13 @@
         "noExplicitAny": "off",
         "noConfusingVoidType": "off"
       }
-    },
-    "includes": ["**", "!**/node_modules", "!**/jsr", "!**/deno", "!**/node"]
+    }
   },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
     "indentStyle": "space",
-    "lineWidth": 80,
-    "includes": ["**", "!**/node_modules", "!**/jsr", "!**/deno", "!**/node"]
+    "lineWidth": 80
   },
   "javascript": {
     "formatter": {
