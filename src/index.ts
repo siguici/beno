@@ -1,3 +1,7 @@
+import { description, license, name, version } from '../package.json';
+import serve from './serve';
+import { exec, execSync, spawn, spawnSync } from './subprocess';
+
 export { default as assert } from './assert';
 export * as async_hooks from './async_hooks';
 export * as buffer from './buffer';
@@ -41,3 +45,23 @@ export * as vm from './vm';
 export * as which from './which';
 export * as worker_threads from './worker_threads';
 export * as zlib from './zlib';
+
+const _beno = {
+  name,
+  version,
+  license,
+  description,
+  serve,
+  exec,
+  execSync,
+  spawn,
+  spawnSync,
+} as const;
+
+declare global {
+  var Beno: typeof _beno;
+}
+
+globalThis.Beno = _beno;
+
+export { _beno as Beno };
