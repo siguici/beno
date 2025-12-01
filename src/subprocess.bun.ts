@@ -3,7 +3,7 @@ import type {
   Subprocess as BunSubprocess,
   SyncSubprocess as BunSyncSubprocess,
 } from 'bun';
-import { isArgs, isSpawnOptions } from './helpers';
+import { isArgs, isSpawnOptions as isBenoSpawnOptions } from './helpers';
 import type {
   ExecOptions as BenoExecOptions,
   SpawnOptions as BenoSpawnOptions,
@@ -13,6 +13,10 @@ import type {
   ProcessResult,
   Stdio,
 } from './types';
+
+function isSpawnOptions(opts: unknown): opts is SpawnOptions {
+  return isBenoSpawnOptions(opts);
+}
 
 export type ExecOptions = BenoExecOptions & BunSpawnOptions.OptionsObject;
 export type SpawnOptions = BenoSpawnOptions & BunSpawnOptions.OptionsObject;
