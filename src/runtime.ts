@@ -15,10 +15,10 @@ export function whichRuntime(cwd: string = process.cwd()): RuntimeInfo {
 
 export function detectedRuntime(): RuntimeInfo | undefined {
   let name: RuntimeName;
-  // @ts-ignore: 'Bun' is a global variable not declared in TypeScript types
+  // @ts-expect-error: 'Bun' is a global variable not declared in TypeScript types
   if (typeof Bun !== 'undefined') {
     name = 'bun';
-    // @ts-ignore: 'Deno' is a global variable not declared in TypeScript types
+    // @ts-expect-error: 'Deno' is a global variable not declared in TypeScript types
   } else if (typeof Deno !== 'undefined') {
     name = 'deno';
   } else {
@@ -46,10 +46,10 @@ export function getRuntimeVersion(runtime: string): Version | undefined {
     case 'node':
       return process.versions.node as Version;
     case 'deno':
-      // @ts-ignore: 'Deno' is a global variable not declared in TypeScript types
+      // @ts-expect-error: 'Deno' is a global variable not declared in TypeScript types
       return Deno.version.deno;
     case 'bun':
-      // @ts-ignore: 'Bun' is a global variable not declared in TypeScript types
+      // @ts-expect-error: 'Bun' is a global variable not declared in TypeScript types
       return Bun.version;
     default:
       return undefined;
