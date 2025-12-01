@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: 🚚 Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Test Environment
         uses: siguici/setup-js@v1
@@ -39,7 +39,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest]
-        bun: [1.2.5]
+        bun: [1.3.3]
         experimental: [false]
     name: 👷 CI Bun-${{ matrix.bun }} on ${{ matrix.os }}
 
